@@ -1,7 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calming Chronicles - Project</title>
+    <!--Linking Bootstrap-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+     <!--Linking CSS style sheet-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<!--Navigation Bar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+        <div class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <a class="nav-link active" aria-current="page" href="#">Home</a> 
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Physical Activity</a>
+            <a class="nav-link" href="#">Breath Work</a>
+            <a class="nav-link" href="#">Body Scan</a>
+            <a class="nav-link" href="journaling.html">Journaling</a>
+            <a class="nav-link" href="#">Topic 5</a>
+            <a class="nav-link" href="#">Resources</a>
+        </div>
+        <form class="d-flex ms-auto" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<!--Banner-->
+<!--Banner Image & Text-->
+<div class="card mb-3">
+    <img src="banner2.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h1 class="card-title">Mantra/Site Name?</h1>
+    </div>
+  </div>
+
+<!--Add Blank Space Between Banner and Video-->
+<hr>
+
+<!--About Section With Video-->
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+</div>
+
+<!--Add Blank Space Between Video and Topics-->
+<hr>
+
+<!--Topic Buttons-->
+<div class="button-container-fluid">
+    <button type="button" class="btn btn-outline-secondary">Physical Actvity</button>
+    <button type="button" class="btn btn-outline-secondary">Breath Work</button>
+    <button type="button" class="btn btn-outline-secondary">Body Scan</button>
+    <button type="button" class="btn btn-outline-secondary">Journaling</button>
+    <button type="button" class="btn btn-outline-secondary">Topic 5</button>   
+</div>
+
+<!--Add Blank Space Between Topics and Footer-->
+<hr>
+
+<!--Footer-->
+
+
+
+
+
+
+
+<!-- Include Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

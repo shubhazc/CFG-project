@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Physical Activity</title>
+    <!--Linking Bootstrap-->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--Linking CSS style sheet-->
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-pa.css" />
+  </head>
+  <body>
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fill">
+      <a class="navbar-brand" href="index.html">Calming Chronicles</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarToggler"
+        aria-controls="navbarToggler"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="physicalactivity.html"
+              >Physical Activity</a
+            >
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Breath Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Body Scan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">journaling</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Topic 5</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+        </ul>
+        <form class="d-flex ms-auto" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <!--Banner-->
+    <!-- Banner Image & Text -->
+    <div
+      class="banner text-center text-white d-flex align-items-center justify-content-center"
+    >
+      <div class="overlay"></div>
+      <img src="banner2.png" class="banner-img" alt="Banner Image" />
+      <div class="container">
+        <h1 class="banner-display">Mantra/Site Name?</h1>
+      </div>
+    </div>
+    <!--Page Heading-->
+    <div id="PhysicalActivityPageHeading">
+      <h1>Mental Health Through Physical Activity</h1>
+      <p>Discover the benefits of staying active for your mind and body</p>
+    </div>
+    <!--page section-->
+   <!-- <section class="Activity">-->
+    <div class="container">
+    <h2>Why Physical Activity Matters</h2>
+    <p>
+      Physical activity is not just beneficial for maintaining physical health
+      but also plays a crucial role in enhancing mental well-being. Engaging in
+      regular exercise can lead to significant improvements in various aspects
+      of mental health, from reducing stress to boosting self-esteem.
+    </p>
+    <!--</section>-->
+    <!--Images with button using bootstrap-->
+    <h3>Find Your Activity</h3>
+    
+        <div class="row">
+            <div class="col-md-4 col-lg-2">
+                <div class="position-relative">
+                    <img src="./images/swimming.jpg" class="img-fluid" alt="Responsive image" height="500px">
+                    <button class="btn btn-primary position-absolute top-50 start-50 translate-middle" onclick="buttonClicked(1)">Swimming</button>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <div class="position-relative">
+                    <img src="./images/walking.jpg" class="img-fluid" alt="Responsive image">
+                    <button class="btn btn-primary position-absolute top-50 start-50 translate-middle" onclick="buttonClicked(2)">Walking</button>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <div class="position-relative">
+                    <img src="./images/yoga.jpg" class="img-fluid" alt="Responsive image">
+                    <button class="btn btn-primary position-absolute top-50 start-50 translate-middle" onclick="buttonClicked(3)">Yoga</button>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <div class="position-relative">
+                    <img src="./images/Running.jpg" class="img-fluid" alt="Responsive image">
+                    <button class="btn btn-primary position-absolute top-50 start-50 translate-middle" onclick="buttonClicked(4)">Running</button>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <div class="position-relative">
+                    <img src="./images/dancing.jpg" class="img-fluid" alt="Responsive image">
+                    <button class="btn btn-primary position-absolute top-50 start-50 translate-middle" onclick="buttonClicked(5)">Dancing</button>
+                </div>
+            </div>
+        </div>
+
+        
+    
+
+        <br>
+  
+</div>
+
+<!-- Footer -->
+<footer class="text-center py-4">
+  <p>&copy; 2024 Calming Chronicles. All rights reserved.</p>
+</footer>
+  
+
+<!-- Include Bootstrap JS-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<!-- Link to custom JavaScript file -->
+  <script src="scripts.js"></script>
+</body>
+</html>
