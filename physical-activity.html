@@ -4,11 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Physical Activity</title>
-    <!--Linking Bootstrap-->
+
+    <!--linking font style-->
     <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Include Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Link to custom JavaScript file -->
+    <script src="scripts.js"></script>
     <!--Linking CSS style sheet-->
 
     <link rel="stylesheet" href="styles.css" />
@@ -67,80 +77,637 @@
       class="banner text-center text-white d-flex align-items-center justify-content-center"
     >
       <div class="overlay"></div>
-      <img src="banner2.png" class="banner-img" alt="Banner Image" />
+      <img src="./images/PABanner.jpg" class="banner-img" alt="Banner Image" />
       <div class="container">
-        <h1 class="banner-display">Mantra/Site Name?</h1>
+        <h1 class="pa-banner">
+          "Exercise not only changes your body, it changes your mind, your
+          attitude and your mood."
+        </h1>
       </div>
     </div>
+
     <!--Page Heading-->
     <div id="PhysicalActivityPageHeading">
       <h1>Mental Health Through Physical Activity</h1>
       <p>Discover the benefits of staying active for your mind and body</p>
     </div>
+
     <!--page section-->
-   <!-- <section class="Activity">-->
+    <!-- <section class="Activity">-->
     <div class="container">
-    <h2>Why Physical Activity Matters</h2>
-    <p>
-      Physical activity is not just beneficial for maintaining physical health
-      but also plays a crucial role in enhancing mental well-being. Engaging in
-      regular exercise can lead to significant improvements in various aspects
-      of mental health, from reducing stress to boosting self-esteem.
-    </p>
-    <!--</section>-->
-    <!--Images with button using bootstrap-->
-    <h3>Find Your Activity</h3>
-    
+      <h2>Why Physical Activity Matters</h2>
+      <p>
+        Physical activity is not just beneficial for maintaining physical health
+        but also plays a crucial role in enhancing mental well-being. Engaging
+        in regular exercise can lead to significant improvements in various
+        aspects of mental health, from reducing stress to boosting self-esteem.
+      </p>
+      <!--</section>-->
+      <!--Images with button using bootstrap-->
+      <h3>Find Your Activity</h3>
+
+      <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 col-lg-2">
-                <div class="position-relative">
-                    <img src="./images/swimming.jpg" class="img-fluid" alt="Responsive image" height="500px">
-                    <button class="btn btn-primary position-absolute top-50 start-50 translate-middle" onclick="buttonClicked(1)">Swimming</button>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="swimmingBackDrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="swimmingBackDropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="swimmingBackDropLabel">
+                    Swimming
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-            </div>
-            <div class="col-md-4 col-lg-2">
-                <div class="position-relative">
-                    <img src="./images/walking.jpg" class="img-fluid" alt="Responsive image">
-                    <button class="btn btn-primary position-absolute top-50 start-50 translate-middle" onclick="buttonClicked(2)">Walking</button>
+                <div class="modal-body">
+                  <p>
+                    Swimming can help you improve your overall and mental
+                    health.
+                  </p>
+
+                  <p>
+                    As with most other forms of exercise, swimming promotes the
+                    release of “feel-good” chemicals called endorphinsTrusted
+                    Source and dopamineTrusted Source. These natural substances
+                    have a direct effect on your mood, helping you calm down and
+                    feel cheerful.
+                  </p>
+
+                  <p>
+                    Exercise can also improve the production of serotonin, which
+                    also improves your mood.
+                  </p>
+
+                  <p>
+                    Swimming can also help your body fight free radicals and
+                    oxidative stressTrusted Source. Free radicals are unstable
+                    compounds that may damage your cells, including your brain
+                    cells. People with depression often have higher levels of
+                    oxidative stress.
+                  </p>
+                  <p>
+                    Taking a dip in the pool may also reduce levels of the
+                    stress hormone cortisolTrusted Source. High cortisol levels
+                    occur when you are feeling anxious or stressed. When you are
+                    calm and relaxed, cortisol levels are low.
+                  </p>
                 </div>
-            </div>
-            <div class="col-md-4 col-lg-2">
-                <div class="position-relative">
-                    <img src="./images/yoga.jpg" class="img-fluid" alt="Responsive image">
-                    <button class="btn btn-primary position-absolute top-50 start-50 translate-middle" onclick="buttonClicked(3)">Yoga</button>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
                 </div>
+              </div>
             </div>
-            <div class="col-md-4 col-lg-2">
-                <div class="position-relative">
-                    <img src="./images/Running.jpg" class="img-fluid" alt="Responsive image">
-                    <button class="btn btn-primary position-absolute top-50 start-50 translate-middle" onclick="buttonClicked(4)">Running</button>
+          </div>
+
+          <div class="col-md-5 col-lg-2 d-flex justify-content-center">
+            <div class="card" style="width: 12rem">
+              <img
+                src="./images/swimming.jpg"
+                class="card-img-top"
+                alt="swimming"
+                height="200px"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Swimming</h5>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#swimmingBackDrop"
+                >
+                  Learn more
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal bootstrap-->
+          <div
+            class="modal fade"
+            id="walkingBackDrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="walkingBackDropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="walkingBackDropLabel">Walking</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-            </div>
-            <div class="col-md-4 col-lg-2">
-                <div class="position-relative">
-                    <img src="./images/dancing.jpg" class="img-fluid" alt="Responsive image">
-                    <button class="btn btn-primary position-absolute top-50 start-50 translate-middle" onclick="buttonClicked(5)">Dancing</button>
+                <div class="modal-body">
+                  <p>
+                    Walking helps boost your mood because it increases blood
+                    flow and blood circulation to the brain and body. It has a
+                    positive influence on your hypothalamic-pituitary-adrenal
+                    (HPA) axis, which is your central nervous response system.
+                    This is good because the HPA axis is responsible for your
+                    stress response. When you exercise by walking, you calm your
+                    nerves, which can make you feel less stressed.
+                  </p>
+                  <p>
+                    You can build on the positive effects of walking by inviting
+                    friends to join you. Walking with others for one or two days
+                    per week can have enormous benefits. Physical exercise
+                    combined with positive social interactions can improve
+                    negative moods, ward off depression, and improve
+                    self-esteem. Try to walk 3 days a week for 10-30 minutes at
+                    a time.
+                  </p>
                 </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="col-md-5 col-lg-2 d-flex justify-content-center">
+            <div class="card" style="width: 12rem">
+              <img
+                src="./images/walking.jpg"
+                class="card-img-top"
+                alt="walking"
+                height="200px"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Walking</h5>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#walkingBackDrop"
+                >
+                  Learn more
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="yogaBackDrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="yogaBackDropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="yogaBackDropLabel">Yoga</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Yoga plays a beneficial role to manage stress related mental
+                    illness like depression and anxiety. Regular practice of
+                    yoga promotes physiological changes such as reducing blood
+                    glucose, blood pressure and cortisol levels and improves
+                    general wellbeing [20,21]. Depression is a
+                    psycho-physiological disorder which majorly involves
+                    alteration in the monoamine (noradrenaline, serotonin,
+                    dopamine) metabolism. Central neurotransmitters such as
+                    gamma-aminobutyric acid (GABA) play an important role in
+                    depression as well.
+                  </p>
+                  <p>
+                    There are multiple mechanisms through which yoga helps in
+                    the management of depression. Yoga is mind-body medicine
+                    widely found to be beneficial in various psycho-somatic
+                    disorders.
+                  </p>
+                  <p>
+                    Yoga includes physical postures, breathing practices,
+                    meditation and also moral principles (yama & niyama) which
+                    helps in emotional culturing to reduce inner conflicts.
+                    According to a recent review of yoga's effect on stress, a
+                    yoga intervention resulted in a significant reduction in
+                    stress.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--column1-->
+          <div class="col-md-5 col-lg-2 d-flex justify-content-center">
+            <div class="card" style="width: 12rem">
+              <img
+                src="./images/yoga.jpg"
+                class="card-img-top"
+                alt="yoga"
+                height="200px"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Yoga</h5>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#yogaBackDrop"
+                >
+                  Learn more
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="runningBackDrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="runningBackDropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="runningBackDropLabel">Running</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Physical exercise has many health benefits. When you run,
+                    endorphins and serotonin are released in your body --
+                    chemicals that may improve mood. Studies show regular
+                    running at a moderate or vigorous pace can improve your
+                    mental health and even your memory and ability to learn.
+                  </p>
+                  <p>
+                    Running outside could have other benefits, like lessening
+                    feelings of loneliness and isolation, reducing the effects
+                    of stress, and helping with depression and anxiety.
+                  </p>
+                  <p>
+                    Running may lessen anxiety and depression in some people. It
+                    won't make depression disappear overnight, but it could help
+                    you manage the symptoms. Some studies suggest regular
+                    running can have the same effects as medication in relieving
+                    symptoms of anxiety and depression.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--column2-->
+          <div class="col-md-5 col-lg-2 d-flex justify-content-center">
+            <div class="card" style="width: 12rem">
+              <img
+                src="./images/Running.jpg"
+                class="card-img-top"
+                alt="running"
+                height="200px"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Running</h5>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#runningBackDrop"
+                >
+                  Learn more
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal using bootstrap -->
+          <div
+            class="modal fade"
+            id="dancingBackDrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="dancingBackDropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="dancingBackDropLabel">Dancing</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Numerous studies have explored the mental health benefits of
+                    both physical exercise and listening to music. Not
+                    surprisingly, dance therapy has also been found to have a
+                    positive impact on mental health.
+                  </p>
+                  <p>
+                    For people who find themselves unable to engage in strenuous
+                    athletic activities, dance can be an excellent alternative.
+                  </p>
+                  <p>
+                    Perhaps dance is one of the ultimate healing remedies that
+                    we need more fully embrace to overcome the effects of trauma
+                    and live longer, happier lives.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--column3-->
+          <div class="col-md-5 col-lg-2 d-flex justify-content-center">
+            <div class="card" style="width: 12rem">
+              <img
+                src="./images/dancing.jpg"
+                class="card-img-top"
+                alt="dancing"
+                height="200px"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dancing</h5>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#dancingBackDrop"
+                >
+                  Learn more
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        
-    
+      <br />
 
-        <br>
-  
-</div>
+      <!--Section With video-->
+      <h3>Success Stories</h3>
+      <!--About Section With Video-->
+      <div class="row">
+        <div class="col-sm-3 d-flex justify-content-center">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              src="https://www.youtube.com/embed/_0R_0n41y90?si=DUQ5JuHABBMHOs0x"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="col-sm-3 d-flex justify-content-center">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              src="https://www.youtube.com/embed/0uoqjpu5hDc"
+              title="Can swimming improve your mental health? - BBC London"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="col-sm-3 d-flex justify-content-center">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              src="https://www.youtube.com/embed/xBesU4JK3tY"
+              title="The Benefits of Walking"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="col-sm-3 d-flex justify-content-center">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              src="https://www.youtube.com/embed/EJbtdWSdM38?si=pP-ybGBMEb5fPNkq"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <br />
+      </div>
 
-<!-- Footer -->
-<footer class="text-center py-4">
-  <p>&copy; 2024 Calming Chronicles. All rights reserved.</p>
-</footer>
-  
+      <br />
+      <!------------Benifits section------->
+      <h2>Benefits of Mental Health Through Physical Activity</h2>
 
-<!-- Include Bootstrap JS-->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-<!-- Link to custom JavaScript file -->
-  <script src="scripts.js"></script>
-</body>
+      <div class="accordion accordion-flush" id="accordionFlush">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              Improved mood&nbsp;
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlush"
+          >
+            <div class="accordion-body">
+              Physical activity can boost mood and help you feel less angry or
+              frustrated. It can also help you develop a positive outlook on
+              life.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+            >
+              Stress and anxiety&nbsp;
+            </button>
+          </h2>
+          <div
+            id="flush-collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlush"
+          >
+            <div class="accordion-body">
+              Physical activity can help you manage stress and reduce anxiety
+              and depression.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree"
+              aria-expanded="false"
+              aria-controls="flush-collapseThree"
+            >
+              Improved brain health
+            </button>
+          </h2>
+          <div
+            id="flush-collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingThree"
+            data-bs-parent="#accordionFlush"
+          >
+            <div class="accordion-body">
+              Physical activity can improve cognitive function and brain
+              connections. It can also help keep your memory sharp by growing
+              the hippocampus, the part of the brain responsible for learning
+              and memory.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFour"
+              aria-expanded="false"
+              aria-controls="flush-collapseFour"
+            >
+              Better sleep&nbsp;
+            </button>
+          </h2>
+          <div
+            id="flush-collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingFour"
+            data-bs-parent="#accordionFlush"
+          >
+            <div class="accordion-body">
+              Physical activity can help you sleep better, which can improve
+              your mental focus and self-control.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFive">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFive"
+              aria-expanded="false"
+              aria-controls="flush-collapseFive"
+            >
+              Increased self-esteem
+            </button>
+          </h2>
+          <div
+            id="flush-collapseFive"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingFive"
+            data-bs-parent="#accordionFlush"
+          >
+            <div class="accordion-body">
+              Physical activity can help boost your self-esteem and alleviate
+              symptoms like social withdrawal.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <!-- Footer -->
+    <footer class="text-center py-4">
+      <p>&copy; 2024 Calming Chronicles. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
